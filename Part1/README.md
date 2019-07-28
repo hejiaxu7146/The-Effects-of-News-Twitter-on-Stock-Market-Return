@@ -1,4 +1,4 @@
-Part1
+
 Project word document---a write-up word to answer all questions. 
 
 Api_keys.json---the key and secret of twitter.
