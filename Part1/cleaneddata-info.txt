@@ -1,0 +1,256 @@
+
+foxnews data head:
+       favorite_count                                               text  \
+29465            6658   benshapiro To suggest that if we just remove ...   
+37790            5947  EXCLUSIVE POTUS interview in PuertoRico Now pe...   
+23599             706  Official Nobody wants answers to Why more than...   
+47794             455  Happening Now Awaiting POTUS at Las Vegas hosp...   
+46815             181  Dramatic bodycam footage shows police rushing ...   
+
+       created_at  retweet_count     point  
+29465  2017/10/04           2005 -0.165278  
+37790  2017/10/04           2009  0.100000  
+23599  2017/10/04            160  0.350000  
+47794  2017/10/04            125  0.000000  
+46815  2017/10/04             97 -0.433333  
+
+CNN data head:
+       favorite_count                                               text  \
+44611             242  President Trump tosses paper towels into the P...   
+28016             287  On gun control Democrats see a tiny sliver of ...   
+42608            1732  How America has silently accepted the rage of ...   
+67719             204     Life through the lens of a blind photographer    
+12198             451  Catalonia Spain s King hits out at secessionis...   
+
+       created_at  retweet_count  point  
+44611  2017/10/04            173    0.0  
+28016  2017/10/04             97    0.0  
+42608  2017/10/04           1327    0.0  
+67719  2017/10/04             86   -0.5  
+12198  2017/10/04            321    0.2  
+
+Gold data head:
+    timestamp    open    high     low   close  adjusted_close     volume  \
+0  2017-10-06  1270.6  1272.5  1269.3  1270.9          1270.9   16394611   
+1  2017-10-05  1277.1  1281.6  1268.5  1271.4          1271.4  102536945   
+2  2017-10-04  1277.9  1285.0  1273.1  1276.5          1276.5  138307545   
+3  2017-10-03  1272.2  1277.4  1271.2  1275.0          1275.0  115633873   
+4  2017-10-02  1277.6  1279.9  1272.0  1274.3          1274.3  143107069   
+
+   dividend_amount  split_coefficient  
+0              0.0                1.0  
+1              0.0                1.0  
+2              0.0                1.0  
+3              0.0                1.0  
+4              0.0                1.0  
+
+NASDAQ data head:
+    timestamp       open       high        low      close  adjusted_close  \
+0  2017-10-06  6566.9512  6590.1802  6566.8408  6590.1802       6590.1802   
+1  2017-10-05  6552.8701  6587.2100  6547.6499  6585.3599       6585.3599   
+2  2017-10-04  6521.9600  6546.4600  6513.1201  6534.6299       6534.6299   
+3  2017-10-03  6523.7402  6532.1802  6509.7100  6531.7100       6531.7100   
+4  2017-10-02  6506.0801  6527.2202  6484.1401  6516.7202       6516.7202   
+
+         volume  dividend_amount  split_coefficient  
+0  1.519413e+09              0.0                1.0  
+1  1.875670e+09              0.0                1.0  
+2  1.938440e+09              0.0                1.0  
+3  1.969320e+09              0.0                1.0  
+4  1.977030e+09              0.0                1.0  
+
+S&P 500 data head:
+    timestamp     open     high      low  close  adjusted_close  volume  \
+0  2017-10-05  23.7797  23.8000  23.5600  23.59           23.59   14285   
+1  2017-10-04  23.8000  23.8200  23.7000  23.70           23.70   15962   
+2  2017-10-03  23.8536  23.8557  23.7100  23.73           23.73    8993   
+3  2017-10-02  23.7900  23.9399  23.7501  23.85           23.85    9872   
+4  2017-09-29  23.9000  23.9500  23.8000  23.80           23.80    5398   
+
+   dividend_amount  split_coefficient  
+0              0.0                1.0  
+1              0.0                1.0  
+2              0.0                1.0  
+3              0.0                1.0  
+4              0.0                1.0  
+
+
+foxnews data shape:
+(47792, 5)
+
+CNN data shape:
+(66927, 5)
+
+gold data shape:
+(511, 9)
+
+NASDAQ data shape:
+(4470, 9)
+
+S&P 500 data shape:
+(2696, 9)
+
+
+foxnews data info:
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 47792 entries, 29465 to 23329
+Data columns (total 5 columns):
+favorite_count    47792 non-null int64
+text              47792 non-null object
+created_at        47792 non-null object
+retweet_count     47792 non-null int64
+point             47792 non-null float64
+dtypes: float64(1), int64(2), object(2)
+memory usage: 2.2+ MB
+None
+
+CNN data info:
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 66927 entries, 44611 to 14195
+Data columns (total 5 columns):
+favorite_count    66927 non-null int64
+text              66927 non-null object
+created_at        66927 non-null object
+retweet_count     66927 non-null int64
+point             66927 non-null float64
+dtypes: float64(1), int64(2), object(2)
+memory usage: 3.1+ MB
+None
+
+gold data info:
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 511 entries, 0 to 521
+Data columns (total 9 columns):
+timestamp            511 non-null object
+open                 511 non-null float64
+high                 511 non-null float64
+low                  511 non-null float64
+close                511 non-null float64
+adjusted_close       511 non-null float64
+volume               511 non-null int64
+dividend_amount      511 non-null float64
+split_coefficient    511 non-null float64
+dtypes: float64(7), int64(1), object(1)
+memory usage: 39.9+ KB
+None
+
+NASDAQ data info:
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 4470 entries, 0 to 4469
+Data columns (total 9 columns):
+timestamp            4470 non-null object
+open                 4470 non-null float64
+high                 4470 non-null float64
+low                  4470 non-null float64
+close                4470 non-null float64
+adjusted_close       4470 non-null float64
+volume               4470 non-null float64
+dividend_amount      4470 non-null float64
+split_coefficient    4470 non-null float64
+dtypes: float64(8), object(1)
+memory usage: 349.2+ KB
+None
+
+S&P 500 data info:
+<class 'pandas.core.frame.DataFrame'>
+Int64Index: 2696 entries, 0 to 2999
+Data columns (total 9 columns):
+timestamp            2696 non-null object
+open                 2696 non-null float64
+high                 2696 non-null float64
+low                  2696 non-null float64
+close                2696 non-null float64
+adjusted_close       2696 non-null float64
+volume               2696 non-null int64
+dividend_amount      2696 non-null float64
+split_coefficient    2696 non-null float64
+dtypes: float64(7), int64(1), object(1)
+memory usage: 210.6+ KB
+None
+
+
+foxnews data describe:
+       favorite_count  retweet_count         point
+count    47792.000000   47792.000000  47792.000000
+mean      1076.625795     376.324866      0.047494
+std       1675.388638     616.746814      0.249855
+min          0.000000       5.000000     -1.000000
+25%        230.750000     104.000000      0.000000
+50%        558.000000     199.000000      0.000000
+75%       1276.000000     411.000000      0.100000
+max      53449.000000   22837.000000      1.000000
+
+CNN data describe:
+       favorite_count  retweet_count         point
+count    66927.000000   66927.000000  66927.000000
+mean       602.270160     342.399510      0.051885
+std       1415.581933     806.554329      0.235088
+min          0.000000       0.000000     -1.000000
+25%        183.000000     112.000000      0.000000
+50%        307.000000     187.000000      0.000000
+75%        586.000000     345.000000      0.136364
+max     148259.000000   69993.000000      1.000000
+
+gold data describe:
+              open         high          low        close  adjusted_close  \
+count   511.000000   511.000000   511.000000   511.000000      511.000000   
+mean   1257.696086  1264.610176  1248.177847  1257.819765     1257.819765   
+std      55.975461    55.835017    78.464790    55.537519       55.537519   
+min    1099.900000  1102.500000     0.000000  1097.800000     1097.800000   
+25%    1226.750000  1234.400000  1218.650000  1226.700000     1226.700000   
+50%    1257.000000  1263.500000  1250.900000  1257.300000     1257.300000   
+75%    1292.950000  1298.300000  1286.200000  1291.600000     1291.600000   
+max    1371.000000  1377.500000  1368.200000  1371.100000     1371.100000   
+
+             volume  dividend_amount  split_coefficient  
+count  5.110000e+02            511.0              511.0  
+mean   9.327034e+07              0.0                1.0  
+std    6.255239e+07              0.0                0.0  
+min    4.668600e+04              0.0                1.0  
+25%    6.779904e+07              0.0                1.0  
+50%    9.568216e+07              0.0                1.0  
+75%    1.197240e+08              0.0                1.0  
+max    6.032614e+08              0.0                1.0  
+
+NASDAQ data describe:
+              open         high          low        close  adjusted_close  \
+count  4470.000000  4470.000000  4470.000000  4470.000000     4470.000000   
+mean   2952.777676  2973.116551  2929.302427  2952.260205     2952.260205   
+std    1275.835797  1279.011363  1271.223935  1275.861612     1275.861612   
+min    1116.760000  1135.890000  1108.490000  1114.110000     1114.110000   
+25%    2044.445000  2059.072600  2028.737500  2044.945000     2044.945000   
+50%    2475.555050  2495.315050  2455.290050  2479.404900     2479.404900   
+75%    3877.595025  3914.907450  3821.157450  3861.064975     3861.064975   
+max    6566.951200  6590.180200  6566.840800  6590.180200     6590.180200   
+
+             volume  dividend_amount  split_coefficient  
+count  4.470000e+03           4470.0             4470.0  
+mean   1.899086e+09              0.0                1.0  
+std    3.980114e+08              0.0                0.0  
+min    2.214300e+08              0.0                1.0  
+25%    1.664980e+09              0.0                1.0  
+50%    1.863480e+09              0.0                1.0  
+75%    2.087105e+09              0.0                1.0  
+max    4.553600e+09              0.0                1.0  
+
+S&P 500 data describe:
+              open         high          low        close  adjusted_close  \
+count  2696.000000  2696.000000  2696.000000  2696.000000     2696.000000   
+mean     21.156738    21.301476    21.001250    21.151359       21.151359   
+std       3.012410     2.948489     3.082479     3.020180        3.020180   
+min       8.790000     9.630000     8.790000     9.300000        9.300000   
+25%      20.100000    20.267500    19.950000    20.090000       20.090000   
+50%      21.290000    21.425000    21.150000    21.300000       21.300000   
+75%      23.112500    23.250000    23.000000    23.143450       23.143450   
+max      26.600000    26.650000    26.600000    26.640000       26.640000   
+
+             volume  dividend_amount  split_coefficient  
+count  2.696000e+03           2696.0             2696.0  
+mean   2.123124e+04              0.0                1.0  
+std    5.409784e+04              0.0                0.0  
+min    2.000000e+02              0.0                1.0  
+25%    5.845750e+03              0.0                1.0  
+50%    1.137350e+04              0.0                1.0  
+75%    2.152750e+04              0.0                1.0  
+max    1.604000e+06              0.0                1.0  
+
